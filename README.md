@@ -25,7 +25,7 @@
 
 | Layer           | Tech Used                       |
 |-----------------|---------------------------------|
-| 🖥️ Frontend    | HTML, CSS, JavaScript           |
+| 🖥️ Frontend    | React Framework (HTML, CSS, JavaScript)           |
 | 🛠️ Backend     | Node.js, Express.js             |
 | 🗄️ Database    | MySQL *(configurable)           |
 | 📦 Server      | Localhost                       |
