@@ -34,6 +34,7 @@
 
 ## 📦 Folder Structure
 LegalConnect/
+
 ├── backend/ # API logic and server config
 
 ├── frontend/ # UI/UX, forms, routing
