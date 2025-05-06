@@ -41,21 +41,34 @@ Hosted on Vercel: http://plan-it-all-eventmanagementsystem.vercel.app
 
 ## 📁 Project Structure
 
-event_in_react/
+EventManagemnet/
 │
+
 ├── frontend/ # React + Vite frontend
+
 │ ├── src/ # React components & logic
+
 │ ├── public/
+
 │ ├── index.html
+
 │ ├── package.json
+
 │ └── vite.config.js
 │
+
 ├── backend/ # Node.js + Express backend
+
 │ ├── models/ # Mongoose schemas
+
 │ ├── routes/ # Express routes
+
 │ ├── controllers/ # API logic
+
 │ ├── .env # MongoDB URI & config
+
 │ └── server.js # App entry point
+
 │
 └── .git/ # Git metadata
 
