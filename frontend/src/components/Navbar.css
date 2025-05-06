@@ -1,0 +1,291 @@
+
+.navbar {
+  background: rgb(0, 0, 0,0.3);
+  color: white;
+  padding: 5px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  margin: 0 !important;
+  width: 100% !important;
+ 
+  transition: all 1s ease; 
+}
+
+.profile-img{
+  color: black;
+}
+
+.navbar.scrolled {
+  background-color: rgb(0, 0, 0,0.7); 
+  border-bottom: 4px solid;
+  padding: 15px 0;
+  border-image: linear-gradient(to right, #ff7f50, #ff1493, #1e90ff, #32cd32);
+  border-image-slice: 1;
+}
+
+
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-brand img{
+  color: white;
+  height: 70px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  margin-right: 20px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(8px);
+}
+
+.hamburger.open {
+  background-color: transparent;
+}
+
+.hamburger.open::before {
+  display: none;
+}
+
+.hamburger.open::after {
+  display: none;
+}
+
+
+
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+}
+
+.navbar-links li {
+  margin-left: 25px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-weight: bolder;
+  font-family: 'Poppins', sans-serif;
+  padding: 0px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+.profile-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-logo {
+  font-size: 3rem; 
+  color: white; 
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 30px; 
+  right: 0;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-dropdown button {
+  background: none;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.profile-dropdown button:hover {
+  background-color: #444;
+}
+.profile-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.profile-dropdown button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.profile-dropdown button:hover {
+  color: #007bff;
+}
+@media(max-width: 468px)
+{
+  .navbar-brand img{
+    display: none;
+  }
+  .close-btn button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    width: 100vw;
+    text-align: start;
+    left: 0px;
+    color: rgb(231, 231, 231);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+}
+@media (max-width: 1024px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .close-btn button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    /* width: 100%  ; */
+    text-align: start;
+    left: 10px; 
+    color: rgb(231, 231, 231);
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  .navbar-container{
+    padding: 20px;
+  }
+  .navbar-links {
+    height: 100vh;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center; 
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    padding-left: 20px; 
+}
+
+.navbar-links.active {
+
+    left: 0;
+}
+
+.navbar-brand img {
+    display: none;
+}
+
+
+  .navbar-links li {
+    margin: 10px 0;
+    
+ 
+  }
+
+  .navbar-links a {
+    padding-left:  45px;
+    padding-top: 30px;
+    text-align: left;
+    width: 100%;
+    font-size: 2.5rem;
+    display: block;
+    
+  }
+
+  .navbar-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .close-btn button {
+   
+   cursor: pointer;
+  }
+
+}

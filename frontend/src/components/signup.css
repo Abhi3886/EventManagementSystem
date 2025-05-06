@@ -1,0 +1,153 @@
+.signup-container {
+  max-width: 500px;
+  margin: 20vh auto;
+  padding: 2rem;
+  border: 1px solid #e5e7eb; 
+  border-radius: 12px; 
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: black; 
+}
+
+.signup-container h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #6b7280; 
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb; 
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: black; 
+  background-color: white;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: black; 
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px); 
+}
+
+.btn-primary {
+  background-color: black; 
+  color: white; 
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.btn-secondary {
+  background-color: #6c757d; 
+  color: white; 
+}
+
+.btn-secondary:hover {
+  background-color: #565e64; 
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    max-width: 90%; 
+    padding: 1.5rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .signup-container h2 {
+    font-size: 1.8rem; 
+  }
+
+  .signup-container h3 {
+    font-size: 1.3rem; 
+  }
+
+  button {
+    font-size: 0.9rem; 
+    padding: 10px; 
+  }
+
+  input,
+  select {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+    margin: 2vh auto;
+    padding: 1rem;
+  }
+
+  .signup-container h2 {
+    font-size: 1.5rem; 
+  }
+
+  .signup-container h3 {
+    font-size: 1.2rem;
+  }
+
+  input,
+  select {
+    font-size: 0.85rem; 
+    padding: 8px;
+  }
+}
